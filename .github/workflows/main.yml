@@ -16,3 +16,13 @@ jobs:
         run: |
           TAG_VERSION=${{  github.ref_name }}
           echo $TAG_VERSION
+    
+  echo1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Print TAG
+          run: |
+            TAG_VERSION=${{  github.ref_name }}
+            echo $TAG_VERSION
