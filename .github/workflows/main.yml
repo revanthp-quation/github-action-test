@@ -23,7 +23,7 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v2
           with:
-            ref: ref/tags/${{ inputs.version }}
+            ref: ${{ github.event.inputs.tag }}
         - name: Print TAG
           run: |
             TAG_VERSION=${{  github.ref_name }}
