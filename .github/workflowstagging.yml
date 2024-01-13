@@ -1,0 +1,18 @@
+name: Edtech DEV ci/cd
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+  input:
+    tag:
+      description: "Github TAG"
+      required: true
+
+jobs:
+  echo:
+    runs-on: ubuntu
+    steps:
+      - name: Print TAG
+        run: |
+          TAG_VERSION=${{  github.ref_name }}
+          echo $TAG_VERSION
