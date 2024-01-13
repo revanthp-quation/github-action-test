@@ -10,7 +10,7 @@ on:
 
 jobs:
   echo:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Print TAG
         run: |
